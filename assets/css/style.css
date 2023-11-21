@@ -1,0 +1,461 @@
+/*---------------------------------------------------------------
+Fonts
+----------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/*---------------------------------------------------------------
+Global
+----------------------------------------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: initial;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    color: #ffff;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*---------------------------------------------------------------
+First Section
+----------------------------------------------------------------*/
+.first-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/the-town-bg-01.jpg);
+    background-position: center;
+    background-size: 100% 130%;
+    background-repeat: no-repeat;
+}
+
+.first-section::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 20%);
+    z-index: 1;
+}
+
+.first-section .wraper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+/* Navbar */
+.first-section .navbar {
+    padding: 1em;
+    width: 100%;
+    height: 8.5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(3 12 57);
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    color: #0083eb;
+    text-shadow: 0 0 2px #3F51B5;
+}
+
+.navbar .navbar-list li {
+    display: inline-block;
+    font-size: 1em;
+    margin-right: 0.5em;
+}
+
+.navbar .navbar-list li:last-child {
+    margin-right: 0;
+}
+
+.navbar .navbar-list li a {
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.5em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.2em;
+    transition: all 0.3s linear;
+}
+
+.navbar .navbar-list li a:hover {
+    border-color: rgba(64, 82, 181, 80%);
+    background-color: rgba(64, 82, 181, 80%);
+    color: #ffffff;
+}
+
+.navbar .navbar-list li.active a {
+    border-color: rgba(64, 82, 181, 80%);
+    background-color: rgba(64, 82, 181, 80%);
+    color: #ffffff;
+}
+
+/* Section Content */
+.first-section .section-content {
+    padding: 0 1em;
+    width: 100%;
+    height: calc(100% - 8.5%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+}
+
+.first-section .section-content h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 4em;
+    font-weight: 600;
+    text-shadow: 0px 5px 5px rgba(38, 131, 235, 50%);
+}
+
+.first-section .section-content span {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.first-section .section-content span.by {
+    padding: 0 0.2em;
+    border-radius: 0.2em;
+    background-color: rgba(64, 82, 181, 50%);
+    color: #ffffff;
+}
+
+/*---------------------------------------------------------------
+Second Section
+----------------------------------------------------------------*/
+.second-section {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+.second-section .section-image {
+    width: 35%;
+}
+
+.second-section .section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+}
+
+.second-section .section-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    text-align: left;
+    width: 45%;
+}
+
+.second-section .section-content h3 {
+    font-size: 1.8em;
+    color: #34449c;
+    font-weight: 600;
+}
+
+.second-section .section-content p {
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.second-section .section-content p strong {
+    padding: 0 0.2em;
+    background-color: rgba(64, 82, 181, 20%);
+    border-radius: 0.2em;
+}
+
+.second-section .section-content p a {
+    color: #0083eb;
+    text-decoration: underline;
+}
+
+.second-section .section-content .link-btn {
+    width: fit-content;
+    background-color: #34449c;
+    color: #fff;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 0.2em 0.5em;
+    line-height: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------------------------------------------------------
+Third Section
+----------------------------------------------------------------*/
+.third-section {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(152,102,77,1) 0%, rgba(4,16,75,1) 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+.third-section .section-block {
+    width: 30%;
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(4 11 57 / 35%);
+    border-radius: 0.5em;
+    box-shadow: 0 0 5px rgb(52 68 156 / 50%);
+    border: 1px solid rgb(255 255 255 / 25%);
+}
+
+.third-section .section-block h3 {
+    font-size: 1.8em;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 0.7em;
+}
+
+.third-section .section-block a {
+    margin-bottom: 0.7em;
+    background-color: #34449c;
+    color: #fff;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 0.2em 0.5em;
+    line-height: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-section .section-block p {
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+/*---------------------------------------------------------------
+Fourth Section
+----------------------------------------------------------------*/
+.fourth-section {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 2em 1em;
+}
+
+.fourth-section .section-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fourth-section .section-header h3 {
+    font-size: 1.8em;
+    color: #34449c;
+    font-weight: 600;
+}
+
+.fourth-section .section-header p {
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.fourth-section .section-content {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fourth-section .section-content div {
+    width: 19%;
+    height: 300px;
+}
+
+.fourth-section .section-content div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.3em;
+}
+
+/*---------------------------------------------------------------
+Footer Section
+----------------------------------------------------------------*/
+footer {
+    position: relative;
+    padding: 1em;
+    background-image: url(../img/the-town-bg-02.jpg);
+    background-size: 100% 145%;
+}
+
+footer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 50%);
+    z-index: 1;
+}
+
+footer .wraper {
+    position: relative;
+    z-index: 2;
+}
+
+footer .contact-us h3 {
+    position: relative;
+    font-size: 2em;
+    color: #a6aed9;
+    font-weight: 600;
+    padding: 0.8em 0 1.3em;
+    margin-bottom: 0.5em;
+}
+
+footer .contact-us h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255 255 255 / 25%);
+}
+
+footer .contact-us h3::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 20%;
+    height: 4px;
+    background-color: rgb(255 255 255 / 25%);
+}
+
+footer .contact-us p {
+    font-size: 1.2em;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+footer .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+footer .contact-info p {
+    padding: 0.5em;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 400;
+    background-color: rgb(4 11 57 / 35%);
+    border-radius: 0.5em;
+    box-shadow: 0 0 5px rgb(52 68 156 / 50%);
+    border: 1px solid rgb(255 255 255 / 25%);
+}
+
+footer .contact-info p span {
+    font-size: 1.2em;
+    color: #a6aed9;
+    font-weight: 600;
+}
+
+footer .contact-info form {
+    min-width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact-info form input {
+    background-color: rgb(4 11 57 / 35%);
+    border-radius: 0.5em;
+    box-shadow: 0 0 5px rgb(52 68 156 / 50%);
+    border: 1px solid rgb(255 255 255 / 25%);
+    padding: 0.5em;
+    color: #fff;
+    font-size: 1em;
+    margin-right: 0.7em;
+}
+
+footer .contact-info form input:focus {
+    outline: none;
+    background-color: rgb(4 11 57 / 35%);
+    border-radius: 0.5em;
+    box-shadow: 0 0 5px rgb(52 68 156 / 50%);
+    border: 1px solid rgb(255 255 255 / 25%);
+}
+
+footer .contact-info form button {
+    outline: none;
+    box-shadow: none;
+    background-color: #34449c;
+    color: #fff;
+    padding: 0.7em;
+    font-size: 0.8em;
+    font-weight: 600;
+    border: 1px solid #34449c;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .copyright {
+    text-align: center;
+}
+
+footer .copyright p {
+    position: relative;
+    font-size: 1.1em;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 2em 0 0;
+}
+
+footer .copyright p a {
+    padding: 0.2em;
+    border-radius: 0.2em;
+    background-color: rgba(64, 82, 181, 40%);
+    color: #ffffff;
+}
